@@ -1,5 +1,6 @@
-import express from 'express';
-import getData from './services';
+const express = require('express')
+const getData = require('./services');
+
 
 const app = express();
 const port = 3000
@@ -16,8 +17,8 @@ app.get('/test', async (_, res) => {
   try {
     res.json(await getData());
   } catch (e) {
-    console.error(e); // eslint-disable-line no-console
-    res.status(500).json({ message: 'Server error, please try again later' });
+    console.error(e);
+    res.status(500).json({ message: 'Server error' });
   }
 });
 

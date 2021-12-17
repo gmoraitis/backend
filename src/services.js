@@ -1,4 +1,5 @@
-import fetch from 'node-fetch';
+// import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
 async function getData() {
     let  response = await fetch('https://cp.fn.sportradar.com/common/en/Etc:UTC/gismo/config_tournaments/1/17');
@@ -13,5 +14,5 @@ async function getData() {
 //   });
 
 
-export default getData()
+module.exports = getData
 
