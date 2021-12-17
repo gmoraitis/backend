@@ -10,7 +10,6 @@ app.use(express.static('public'));
 
 app.get('/', (_, res) => {
   res.sendFile('index.html');
-  // res.send('Hello World!')
 });
 
 app.get('/test', async (_, res) => {
