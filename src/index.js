@@ -3,7 +3,7 @@ const getData = require('./services');
 
 
 const app = express();
-const port = 3000
+const port = 3001;
 
 
 app.use(express.static('public'));
@@ -12,7 +12,7 @@ app.get('/', (_, res) => {
   res.sendFile('index.html');
 });
 
-app.get('/test', async (_, res) => {
+app.get('/data', async (_, res) => {
   try {
     res.json(await getData());
   } catch (e) {
