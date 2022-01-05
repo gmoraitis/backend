@@ -1,29 +1,32 @@
-# Backend
+# Matches Presentation App Backend
 
 ## Scripts
 
-### Run the project in development mode
+1.Starts the application in development mode using nodemon.
 ```bash
 npm run start:dev
 ```
-~~### Creating production builds~~
+
+2.Builds the app at build, cleaning the folder first.
 ```bash
 npm run build
 ```
 
-~~### Run the project in production mode~~
+3.Starts the app in production mode by first building the project with npm run build, and then executing the compiled JavaScript at build/index.js.
 ```bash
 npm run start
 ```
 
-~~### Scripts overview~~
-**npm run start:dev**
-Starts the application in development using nodemon and ts-node to do cold reloading.
+## Connect with the frontend app
 
-~~**npm run build**~~
-Builds the app at build, cleaning the folder first.
+First run 
+```bash
+npm run start:dev
+```
+..from this current folder, so that we can have the data available in the `/data` endpoint
 
-~~**npm run start**~~
-Starts the app in production by first building the project with npm run build, and then executing the compiled JavaScript at build/index.js.~~
-
-
+Then go to the frontend folder and run
+```bash
+npm start
+```
+ 
