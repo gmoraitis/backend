@@ -15,11 +15,9 @@ const tournamentNamesAndIds = async (data) => {
 
     const tournamentNamesAndIds  = {};
 
-    // Tournaments
     for (const tournament of data['tournaments'])
     tournamentNamesAndIds[Number(tournament['_id'])] = tournament['name'];
 
-    // Unique tournaments
     for (const id of Object.keys(data['uniquetournaments']))
     tournamentNamesAndIds[Number(id)] = data['uniquetournaments'][id]['name'];
 
